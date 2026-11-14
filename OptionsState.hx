@@ -16,6 +16,7 @@ class OptionsState extends MusicBeatState
 		'Visuals',
 		'Controls',
 		'Note Colors',
+		'Modding+',
 		'Adjust Delay and Combo'
 		#if TRANSLATIONS_ALLOWED , 'Language' #end
 	];
@@ -82,6 +83,8 @@ class OptionsState extends MusicBeatState
 				openSubState(new options.ControlsSubState());
 			case 'Note Colors':
 				openSubState(new options.NotesColorSubState());
+			case 'Modding+':
+				openSubState(new options.ModdingPlusOptionsSubState());
 			#if TRANSLATIONS_ALLOWED
 			case 'Language':
 				openSubState(new options.LanguageSubState());
